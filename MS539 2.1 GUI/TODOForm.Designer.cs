@@ -30,6 +30,7 @@ namespace MS539_2._1_GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TODO));
             this.addTaskButton = new System.Windows.Forms.Button();
             this.taskListView = new System.Windows.Forms.ListView();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace MS539_2._1_GUI
             // addTaskButton
             // 
             this.addTaskButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-
             this.addTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addTaskButton.Location = new System.Drawing.Point(208, 265);
             this.addTaskButton.Margin = new System.Windows.Forms.Padding(2);
@@ -96,9 +96,11 @@ namespace MS539_2._1_GUI
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addTaskButton);
             this.Controls.Add(this.taskListView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(305, 313);
             this.Name = "TODO";
+            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ToDo";

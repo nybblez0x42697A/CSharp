@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,5 +75,28 @@ namespace MS539_2._1_GUI
             }
         }
 
+
+        private void statusComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deadlineCalendar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void durationComboBox_Selected(object sender, EventArgs e)
+        {
+            if (durationComboBox.SelectedItem.ToString() == "+ New Duration")
+            {
+                NewDurationForm newDurationInput = new NewDurationForm();
+                if (newDurationInput.ShowDialog() == DialogResult.OK)
+                {
+                    durationComboBox.Items.Insert(durationComboBox.Items.Count - 1, newDurationInput.newDurationTextBox.Text);
+                    durationComboBox.SelectedItem = newDurationInput.newDurationTextBox.Text;
+                }
+            }
+        }
     }
 }

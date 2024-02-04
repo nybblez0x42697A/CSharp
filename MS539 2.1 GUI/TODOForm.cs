@@ -51,8 +51,9 @@ namespace MS539_2._1_GUI
                         newItem.Group = taskListView.Groups[taskInputDialog.workspaceTree.SelectedNode.Text];
                         // Retrieve task information from the dialog.
                         newItem.SubItems.Add(taskInputDialog.workspaceTree.SelectedNode.Text);
-                        newItem.SubItems.Add(taskInputDialog.deadlineCalendar.SelectionEnd.ToString());
-                        newItem.SubItems.Add(taskInputDialog.statusComboBox.SelectedItem.ToString());
+                        newItem.SubItems.Add(taskInputDialog.deadlineCalendar.Value.ToString());
+                        //newItem.SubItems.Add(taskInputDialog.statusComboBox.SelectedItem.ToString());
+                        newItem.SubItems.Add(taskInputDialog.statusComboBox.Text);
                         // Add the task to the ListView.
                         taskListView.Items.Add(newItem);
                     }
