@@ -8,16 +8,17 @@ using TODO.Classes;
 /** This form is used to load tasks from a file and call subsequent forms
  * for creating new tasks to add to the todo list.
  * 
- * Updates: 4.1
- *  - Added parsing and loading for saved task list file.
+ *  * Updates: 5.1
+ *  - Added the usage of string functions from Date objects to improve readability of task list columns.
+ *  - Added label edit action to account for the user making changes to tasknames while within the main form.
+ *  - Modified logic to update the objects holding the json data to account for user-modified tasks.
  *  
  *   Anticipated Time to Complete: 2 hours
  * 
- *   Actual Time to Complete: 1.5 hours
+ *   Actual Time to Complete: 1 hour
  * 
- * Contributing Issues: One of the biggest issues I had was with getting my methods to parse my json file properly. It took a little longer
- * than expexted to get that functionality working, but it could have been worse. It turned out to be a very minor issue that I was overlooking (as it always is);
- * I was trying to use a dictionary for the json but using a list to try to store it for use in the app.
+ *  I didn't have to many issues with these updates. It mostly went fairly smoothly. I think I want to add logic to allow editing of the majority
+ *  of fields for the tasks, but that depends on time.
  * */
 
 namespace MS539_2._1_GUI
@@ -31,6 +32,7 @@ namespace MS539_2._1_GUI
         public TODO()
         {
             InitializeComponent();
+
             this.FormClosing += new FormClosingEventHandler(TODOForm_FormClosing);
 
             // Subscribe to the UnhandledException event for saving if the app crashes.
@@ -41,6 +43,7 @@ namespace MS539_2._1_GUI
         {
             InitializeTaskListView();
             LoadTasks();
+
 
         }
 
@@ -140,13 +143,13 @@ namespace MS539_2._1_GUI
                         newTask.Name = taskText;
                         newTask.Workspace = taskInputDialog.workspaceTree.SelectedNode.Text;
 
-                        newTask.Deadline = taskInputDialog.deadlineCalendar.Value.ToString();
+                        newTask.Deadline = taskInputDialog.deadlineCalendar.Value.Date.ToShortDateString();
                         newTask.Status = taskInputDialog.statusComboBox.Text;
                         newTask.Priority = taskInputDialog.priorityComboBox.Text;
-                        newTask.StartDate = taskInputDialog.startDateCalendar.Value.ToString();
+                        newTask.StartDate = taskInputDialog.startDateCalendar.Value.Date.ToShortDateString();
                         newTask.Description = taskInputDialog.descriptionText.Text;
-                        newTask.StartTime = taskInputDialog.startDateCalendar.Value.TimeOfDay.ToString();
-                        newTask.EndTime = taskInputDialog.deadlineCalendar.Value.TimeOfDay.ToString();
+                        newTask.StartTime = taskInputDialog.startDateCalendar.Value.Date.ToShortTimeString();
+                        newTask.EndTime = taskInputDialog.deadlineCalendar.Value.Date.ToShortTimeString();
                         newTask.TaskDuration = taskInputDialog.durationComboBox.Text;
 
                         Root.Workspaces[newTask.Workspace].Tasks.Add(newTask.Name, newTask);
@@ -257,6 +260,25 @@ namespace MS539_2._1_GUI
             {
                 MessageBox.Show("No incomplete tasks to choose from.");
             }
+        }
+
+        private void taskListView_AfterLabelEdit(object sender, LabelEditEventArgs e)
+        {
+            try
+            {
+
+            string workspace = taskListView.Items[e.Item].SubItems[taskListView.Columns.IndexOfKey("Workspace")].Text;
+            int taskNameColumn = taskListView.Columns.IndexOfKey("Name");
+            string oldTaskName = taskListView.Items[e.Item].SubItems[taskNameColumn].Text;
+
+            Root.Workspaces[workspace].Tasks[e.Label] = Root.Workspaces[workspace].Tasks[oldTaskName];
+            Root.Workspaces[workspace].Tasks.Remove(oldTaskName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
