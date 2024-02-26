@@ -28,38 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("My Tasks");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newTaskDialog));
             this.descriptionText = new System.Windows.Forms.RichTextBox();
             this.cancelNewTaskButton = new System.Windows.Forms.Button();
             this.saveNewTaskButton = new System.Windows.Forms.Button();
             this.TaskName = new System.Windows.Forms.TextBox();
             this.workspaceTree = new System.Windows.Forms.TreeView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.taskInfoFLPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.taskSettingsGB = new System.Windows.Forms.GroupBox();
+            this.priorityLabel = new System.Windows.Forms.Label();
             this.priorityComboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.workspaceLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.timelineGB = new System.Windows.Forms.GroupBox();
+            this.endTimeLabel = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.durationComboBox = new System.Windows.Forms.ComboBox();
             this.durationLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.startTimeLabel = new System.Windows.Forms.Label();
             this.startDateLabel = new System.Windows.Forms.Label();
             this.deadlineCalendar = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.deadlineLabel = new System.Windows.Forms.Label();
             this.startDateCalendar = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.taskSettingsFLPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.taskNameFLPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.taskInfoFLPanel.SuspendLayout();
+            this.taskSettingsGB.SuspendLayout();
+            this.timelineGB.SuspendLayout();
+            this.taskSettingsFLPanel.SuspendLayout();
+            this.taskNameFLPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // descriptionText
@@ -129,53 +128,48 @@
             this.workspaceTree.HotTracking = true;
             this.workspaceTree.Location = new System.Drawing.Point(96, 26);
             this.workspaceTree.Name = "workspaceTree";
-            treeNode1.Name = "myTasksRootNode";
-            treeNode1.Text = "My Tasks";
-            treeNode1.ToolTipText = "Choose a workspace for your new task.";
-            this.workspaceTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
             this.workspaceTree.Size = new System.Drawing.Size(124, 68);
             this.workspaceTree.TabIndex = 8;
             this.workspaceTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.workspaceTree_NodeSelected);
             // 
-            // flowLayoutPanel1
+            // taskInfoFLPanel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.taskInfoFLPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(292, -29);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(232, 285);
-            this.flowLayoutPanel1.TabIndex = 9;
-            this.flowLayoutPanel1.WrapContents = false;
+            this.taskInfoFLPanel.AutoSize = true;
+            this.taskInfoFLPanel.Controls.Add(this.taskSettingsGB);
+            this.taskInfoFLPanel.Controls.Add(this.timelineGB);
+            this.taskInfoFLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.taskInfoFLPanel.Location = new System.Drawing.Point(292, -29);
+            this.taskInfoFLPanel.Name = "taskInfoFLPanel";
+            this.taskInfoFLPanel.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
+            this.taskInfoFLPanel.Size = new System.Drawing.Size(232, 285);
+            this.taskInfoFLPanel.TabIndex = 9;
+            this.taskInfoFLPanel.WrapContents = false;
             // 
-            // groupBox1
+            // taskSettingsGB
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.priorityComboBox);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.statusComboBox);
-            this.groupBox1.Controls.Add(this.workspaceTree);
-            this.groupBox1.Location = new System.Drawing.Point(3, 28);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(226, 100);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
+            this.taskSettingsGB.Controls.Add(this.priorityLabel);
+            this.taskSettingsGB.Controls.Add(this.priorityComboBox);
+            this.taskSettingsGB.Controls.Add(this.workspaceLabel);
+            this.taskSettingsGB.Controls.Add(this.statusLabel);
+            this.taskSettingsGB.Controls.Add(this.statusComboBox);
+            this.taskSettingsGB.Controls.Add(this.workspaceTree);
+            this.taskSettingsGB.Location = new System.Drawing.Point(3, 28);
+            this.taskSettingsGB.Name = "taskSettingsGB";
+            this.taskSettingsGB.Size = new System.Drawing.Size(226, 100);
+            this.taskSettingsGB.TabIndex = 20;
+            this.taskSettingsGB.TabStop = false;
             // 
-            // label6
+            // priorityLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Priority";
+            this.priorityLabel.AutoSize = true;
+            this.priorityLabel.Location = new System.Drawing.Point(4, 55);
+            this.priorityLabel.Name = "priorityLabel";
+            this.priorityLabel.Size = new System.Drawing.Size(38, 13);
+            this.priorityLabel.TabIndex = 16;
+            this.priorityLabel.Text = "Priority";
             // 
             // priorityComboBox
             // 
@@ -194,23 +188,23 @@
             this.priorityComboBox.Size = new System.Drawing.Size(84, 21);
             this.priorityComboBox.TabIndex = 15;
             // 
-            // label5
+            // workspaceLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(93, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Workspace";
+            this.workspaceLabel.AutoSize = true;
+            this.workspaceLabel.Location = new System.Drawing.Point(93, 10);
+            this.workspaceLabel.Name = "workspaceLabel";
+            this.workspaceLabel.Size = new System.Drawing.Size(62, 13);
+            this.workspaceLabel.TabIndex = 14;
+            this.workspaceLabel.Text = "Workspace";
             // 
-            // label2
+            // statusLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Status";
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(4, 10);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(37, 13);
+            this.statusLabel.TabIndex = 13;
+            this.statusLabel.Text = "Status";
             // 
             // statusComboBox
             // 
@@ -230,33 +224,33 @@
             this.statusComboBox.TabIndex = 2;
             this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.statusComboBox_SelectedIndexChanged);
             // 
-            // groupBox2
+            // timelineGB
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.durationComboBox);
-            this.groupBox2.Controls.Add(this.durationLabel);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.startDateLabel);
-            this.groupBox2.Controls.Add(this.deadlineCalendar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.startDateCalendar);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 134);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(226, 148);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Timeline";
+            this.timelineGB.Controls.Add(this.endTimeLabel);
+            this.timelineGB.Controls.Add(this.dateTimePicker2);
+            this.timelineGB.Controls.Add(this.durationComboBox);
+            this.timelineGB.Controls.Add(this.durationLabel);
+            this.timelineGB.Controls.Add(this.startTimeLabel);
+            this.timelineGB.Controls.Add(this.startDateLabel);
+            this.timelineGB.Controls.Add(this.deadlineCalendar);
+            this.timelineGB.Controls.Add(this.deadlineLabel);
+            this.timelineGB.Controls.Add(this.startDateCalendar);
+            this.timelineGB.Controls.Add(this.dateTimePicker1);
+            this.timelineGB.Location = new System.Drawing.Point(3, 134);
+            this.timelineGB.Name = "timelineGB";
+            this.timelineGB.Size = new System.Drawing.Size(226, 148);
+            this.timelineGB.TabIndex = 21;
+            this.timelineGB.TabStop = false;
+            this.timelineGB.Text = "Timeline";
             // 
-            // label4
+            // endTimeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(114, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "End Time";
+            this.endTimeLabel.AutoSize = true;
+            this.endTimeLabel.Location = new System.Drawing.Point(114, 67);
+            this.endTimeLabel.Name = "endTimeLabel";
+            this.endTimeLabel.Size = new System.Drawing.Size(52, 13);
+            this.endTimeLabel.TabIndex = 20;
+            this.endTimeLabel.Text = "End Time";
             // 
             // dateTimePicker2
             // 
@@ -291,14 +285,14 @@
             this.durationLabel.TabIndex = 14;
             this.durationLabel.Text = "Duration";
             // 
-            // label3
+            // startTimeLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(114, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Start Time";
+            this.startTimeLabel.AutoSize = true;
+            this.startTimeLabel.Location = new System.Drawing.Point(114, 28);
+            this.startTimeLabel.Name = "startTimeLabel";
+            this.startTimeLabel.Size = new System.Drawing.Size(55, 13);
+            this.startTimeLabel.TabIndex = 18;
+            this.startTimeLabel.Text = "Start Time";
             // 
             // startDateLabel
             // 
@@ -318,15 +312,15 @@
             this.deadlineCalendar.TabIndex = 9;
             this.deadlineCalendar.ValueChanged += new System.EventHandler(this.deadlineCalendar_ValueChanged);
             // 
-            // label1
+            // deadlineLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(6, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Deadline";
+            this.deadlineLabel.AutoSize = true;
+            this.deadlineLabel.ForeColor = System.Drawing.Color.Red;
+            this.deadlineLabel.Location = new System.Drawing.Point(6, 67);
+            this.deadlineLabel.Name = "deadlineLabel";
+            this.deadlineLabel.Size = new System.Drawing.Size(49, 13);
+            this.deadlineLabel.TabIndex = 12;
+            this.deadlineLabel.Text = "Deadline";
             // 
             // startDateCalendar
             // 
@@ -345,42 +339,42 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
-            // flowLayoutPanel2
+            // taskSettingsFLPanel
             // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.cancelNewTaskButton);
-            this.flowLayoutPanel2.Controls.Add(this.saveNewTaskButton);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.ForeColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(293, 255);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(231, 28);
-            this.flowLayoutPanel2.TabIndex = 10;
-            this.flowLayoutPanel2.WrapContents = false;
+            this.taskSettingsFLPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskSettingsFLPanel.BackColor = System.Drawing.Color.Transparent;
+            this.taskSettingsFLPanel.Controls.Add(this.cancelNewTaskButton);
+            this.taskSettingsFLPanel.Controls.Add(this.saveNewTaskButton);
+            this.taskSettingsFLPanel.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.taskSettingsFLPanel.ForeColor = System.Drawing.Color.Transparent;
+            this.taskSettingsFLPanel.Location = new System.Drawing.Point(293, 255);
+            this.taskSettingsFLPanel.Name = "taskSettingsFLPanel";
+            this.taskSettingsFLPanel.Size = new System.Drawing.Size(231, 28);
+            this.taskSettingsFLPanel.TabIndex = 10;
+            this.taskSettingsFLPanel.WrapContents = false;
             // 
-            // flowLayoutPanel3
+            // taskNameFLPanel
             // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.taskNameFLPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.Controls.Add(this.TaskName);
-            this.flowLayoutPanel3.Controls.Add(this.descriptionText);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(2, 9);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(287, 281);
-            this.flowLayoutPanel3.TabIndex = 11;
-            this.flowLayoutPanel3.WrapContents = false;
+            this.taskNameFLPanel.Controls.Add(this.TaskName);
+            this.taskNameFLPanel.Controls.Add(this.descriptionText);
+            this.taskNameFLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.taskNameFLPanel.Location = new System.Drawing.Point(2, 9);
+            this.taskNameFLPanel.Name = "taskNameFLPanel";
+            this.taskNameFLPanel.Size = new System.Drawing.Size(287, 281);
+            this.taskNameFLPanel.TabIndex = 11;
+            this.taskNameFLPanel.WrapContents = false;
             // 
             // newTaskDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 285);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.taskInfoFLPanel);
+            this.Controls.Add(this.taskNameFLPanel);
+            this.Controls.Add(this.taskSettingsFLPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(543, 442);
             this.MinimumSize = new System.Drawing.Size(543, 310);
@@ -388,14 +382,14 @@
             this.ShowIcon = false;
             this.Text = "New Task";
             this.Load += new System.EventHandler(this.newTaskForm_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
+            this.taskInfoFLPanel.ResumeLayout(false);
+            this.taskSettingsGB.ResumeLayout(false);
+            this.taskSettingsGB.PerformLayout();
+            this.timelineGB.ResumeLayout(false);
+            this.timelineGB.PerformLayout();
+            this.taskSettingsFLPanel.ResumeLayout(false);
+            this.taskNameFLPanel.ResumeLayout(false);
+            this.taskNameFLPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,25 +401,25 @@
         internal System.Windows.Forms.TextBox TaskName;
         internal System.Windows.Forms.RichTextBox descriptionText;
         internal System.Windows.Forms.TreeView workspaceTree;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel taskInfoFLPanel;
+        private System.Windows.Forms.FlowLayoutPanel taskSettingsFLPanel;
+        private System.Windows.Forms.FlowLayoutPanel taskNameFLPanel;
         internal System.Windows.Forms.ComboBox statusComboBox;
         internal System.Windows.Forms.DateTimePicker deadlineCalendar;
-        private System.Windows.Forms.ComboBox durationComboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label durationLabel;
-        private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label deadlineLabel;
+        internal System.Windows.Forms.Label durationLabel;
+        internal System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label startDateLabel;
         internal System.Windows.Forms.DateTimePicker startDateCalendar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox taskSettingsGB;
+        private System.Windows.Forms.GroupBox timelineGB;
+        private System.Windows.Forms.Label startTimeLabel;
+        private System.Windows.Forms.Label endTimeLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label workspaceLabel;
+        private System.Windows.Forms.Label priorityLabel;
         internal System.Windows.Forms.ComboBox priorityComboBox;
+        internal System.Windows.Forms.ComboBox durationComboBox;
     }
 }

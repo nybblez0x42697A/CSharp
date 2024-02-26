@@ -24,3 +24,16 @@ C:\Users\nybblez\source\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.csproj
 C:\Users\nybblez\source\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.csproj.CoreCompileInputs.cache
 C:\Users\nybblez\source\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.exe
 C:\Users\nybblez\source\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.pdb
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\MS539 2.1 GUI.exe.config
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\MS539 2.1 GUI.exe
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\MS539 2.1 GUI.pdb
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.csproj.AssemblyReference.cache
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.NewDurationForm.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.newTaskDialog.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.TODO.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.Properties.Resources.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.UserControl1.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.csproj.GenerateResource.cache
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.exe
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539 2.1 GUI.pdb

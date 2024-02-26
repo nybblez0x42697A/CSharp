@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34408.163
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34601.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS539 2.1 GUI", "MS539 2.1 GUI\MS539 2.1 GUI.csproj", "{C6D993A6-E4AE-44DC-962D-975F5BE9CDB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODOv4.1", "MS539 2.1 GUI\TODOv4.1.csproj", "{C6D993A6-E4AE-44DC-962D-975F5BE9CDB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

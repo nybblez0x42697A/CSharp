@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="MS539_2._1_GUI.NewDurationForm">
+    <Position X="9.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AABAQEABACAAABAAAACgAAACAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>NewDurationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MS539_2._1_GUI.newTaskDialog">
+    <Position X="5.5" Y="0.5" Width="3.25" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>iAQAiAACEmoqAAACBACAAQAHAgAABSMBCAAIEAABCAE=</HashCode>
+      <FileName>NewTaskForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MS539_2._1_GUI.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

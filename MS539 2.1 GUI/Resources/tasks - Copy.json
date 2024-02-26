@@ -1,0 +1,68 @@
+{
+  "Default": null,
+  "Workspaces": {
+    "My Tasks": {
+      "WorkspaceName": null,
+      "Tasks": {
+        "Snacks for Football Team": {
+          "Name": null,
+          "Description": "Buy snacks for Heath's football team",
+          "Status": "Incomplete",
+          "Priority": "Low",
+          "Workspace": null,
+          "StartDate": null,
+          "Deadline": "2024-03-10",
+          "TaskDuration": null,
+          "StartTime": null,
+          "EndTime": null
+        }
+      }
+    },
+    "Personal": {
+      "WorkspaceName": null,
+      "Tasks": {
+        "Grocery Shopping": {
+          "Name": null,
+          "Description": "Buy groceries for the week",
+          "Status": "Incomplete",
+          "Priority": "High",
+          "Workspace": null,
+          "StartDate": null,
+          "Deadline": null,
+          "TaskDuration": null,
+          "StartTime": null,
+          "EndTime": null
+        },
+        "Jogging": {
+          "Name": null,
+          "Description": "Morning jogging for 30 minutes",
+          "Status": "Complete",
+          "Priority": "Medium",
+          "Workspace": null,
+          "StartDate": "2024-02-25",
+          "Deadline": null,
+          "TaskDuration": "30 minutes",
+          "StartTime": "07:00",
+          "EndTime": "07:30"
+        }
+      }
+    },
+    "Work": {
+      "WorkspaceName": null,
+      "Tasks": {
+        "Project Presentation": {
+          "Name": null,
+          "Description": "Prepare slides for the upcoming project presentation",
+          "Status": "In Progress",
+          "Priority": "Urgent",
+          "Workspace": null,
+          "StartDate": "2024-02-25",
+          "Deadline": "2024-03-05",
+          "TaskDuration": "2 hours",
+          "StartTime": null,
+          "EndTime": null
+        }
+      }
+    }
+  }
+}

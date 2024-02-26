@@ -34,13 +34,14 @@ namespace MS539_2._1_GUI
             this.addTaskButton = new System.Windows.Forms.Button();
             this.taskListView = new System.Windows.Forms.ListView();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.randomTaskButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addTaskButton
             // 
             this.addTaskButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addTaskButton.Location = new System.Drawing.Point(208, 265);
+            this.addTaskButton.Location = new System.Drawing.Point(207, 265);
             this.addTaskButton.Margin = new System.Windows.Forms.Padding(2);
             this.addTaskButton.MinimumSize = new System.Drawing.Size(26, 28);
             this.addTaskButton.Name = "addTaskButton";
@@ -75,16 +76,32 @@ namespace MS539_2._1_GUI
             this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteButton.Location = new System.Drawing.Point(115, 265);
+            this.deleteButton.Location = new System.Drawing.Point(110, 265);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.MinimumSize = new System.Drawing.Size(26, 28);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(71, 28);
+            this.deleteButton.Size = new System.Drawing.Size(80, 28);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "Delete Task";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Visible = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // randomTaskButton
+            // 
+            this.randomTaskButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.randomTaskButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.randomTaskButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.randomTaskButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.randomTaskButton.Location = new System.Drawing.Point(11, 265);
+            this.randomTaskButton.Margin = new System.Windows.Forms.Padding(2);
+            this.randomTaskButton.MinimumSize = new System.Drawing.Size(26, 28);
+            this.randomTaskButton.Name = "randomTaskButton";
+            this.randomTaskButton.Size = new System.Drawing.Size(82, 28);
+            this.randomTaskButton.TabIndex = 2;
+            this.randomTaskButton.Text = "Random Task";
+            this.randomTaskButton.UseVisualStyleBackColor = true;
+            this.randomTaskButton.Click += new System.EventHandler(this.randomTaskButton_Click);
             // 
             // TODO
             // 
@@ -93,6 +110,7 @@ namespace MS539_2._1_GUI
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(289, 301);
+            this.Controls.Add(this.randomTaskButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addTaskButton);
             this.Controls.Add(this.taskListView);
@@ -114,6 +132,7 @@ namespace MS539_2._1_GUI
         private System.Windows.Forms.Button addTaskButton;
         internal System.Windows.Forms.ListView taskListView;
         private Button deleteButton;
+        private Button randomTaskButton;
     }
 }
 

@@ -1,21 +1,15 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MS539_2._1_GUI
 {
     public partial class newTaskDialog : Form
     {
-        public newTaskDialog()
+        public newTaskDialog(ListViewGroupCollection workspaces)
         {
             InitializeComponent();
+            workspaceTree_Load(workspaces);
         }
 
         private void newTaskForm_Load(object sender, EventArgs e)
@@ -51,15 +45,18 @@ namespace MS539_2._1_GUI
 
         private void taskName_LeaveFocus(object sender, EventArgs e)
         {
-            if (TaskName.Text.Length > 0)
-            {
-                saveNewTaskButton.Enabled = true;
-            }
-            else
+            if (TaskName.Text.Length == 0)
             {
                 TaskName.Text = "Task Name";
                 TaskName.ForeColor = Color.Gray;
-                saveNewTaskButton.Enabled = false;
+            }
+        }
+
+        private void workspaceTree_Load(ListViewGroupCollection workspaces)
+        {
+            foreach( var workspace in workspaces )
+            {
+                workspaceTree.Nodes.Add(workspace.ToString());
             }
         }
 

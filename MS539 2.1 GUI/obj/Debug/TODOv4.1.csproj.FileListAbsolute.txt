@@ -1,0 +1,16 @@
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\TODO.exe.config
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\TODO.exe
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\TODO.pdb
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.NewDurationForm.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.newTaskDialog.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.TODO.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODO.Properties.Resources.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\MS539_2._1_GUI.UserControl1.resources
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODOv4.1.csproj.GenerateResource.cache
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODOv4.1.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODO.exe
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODO.pdb
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODOv4.1.csproj.CopyComplete
+C:\Users\Administrator\OneDrive\School\UAT\repos\MS539\MS539 2.1 GUI\obj\Debug\TODOv4.1.csproj.AssemblyReference.cache

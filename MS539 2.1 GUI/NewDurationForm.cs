@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /** This form is used to input a new duration value for a task.
@@ -41,7 +34,6 @@ namespace MS539_2._1_GUI
             {
                     newDurationTextBox.BackColor = Color.PaleVioletRed;
                     toolTip1.Show("Value must be an integer", newDurationTextBox);
-                    //newDurationOK.Enabled = false;
                     newDurationOK.DialogResult = DialogResult.None;
             }
             else
